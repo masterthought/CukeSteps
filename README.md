@@ -7,6 +7,8 @@ _Steps Navigator for cucumber-JVM projects_
     It currently locates all available steps in .java or .feature files.
     After compilation phase, it generates a cukes.html report which can be found in the target/ folder
 
+![Screenshot] (md/cuke_suggestions.png "Suggestions from existing steps")
+
 ### How to use it?
 
 Introduce the following in the plugins section of your pom.xml:
