@@ -1,3 +1,10 @@
+body {
+    font-family: Verdana,serif;
+}
+
+h1 {
+    color: #19791e;
+}
 
 div.jsonSuggestResults {
     position:absolute;
@@ -16,14 +23,14 @@ div.jsonSuggestResults div.resultItem {
 }
 
 div.jsonSuggestResults div.resultItem.odd {
-    background-color:#9ADFFE;
+    background-color: #25cf3a;
 }
 div.jsonSuggestResults div.resultItem.even {
-    background-color:#FFFFFF;
+    background-color: #b3fb04;
 }
 
 div.jsonSuggestResults div.resultItem.hover {
-    background-color:#3399FF;
+    background-color:#19791e;
 }
 
 div.jsonSuggestResults div.resultItem img {

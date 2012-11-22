@@ -23,5 +23,7 @@ public class StepTest {
         Step step1 = new Step(1,"Given I have some data","/features/feature1.feature");
         Step step2 = new Step(2,"Given I have some data","/features/feature2.feature");
         assertThat(step1.compareTo(step2), is(-1));
+        assertThat(step2.compareTo(step2), is(0));
+        assertThat(step2.compareTo(step1), is(1));
     }
 }
