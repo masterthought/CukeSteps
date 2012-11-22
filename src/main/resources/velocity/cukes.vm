@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0072)http://tomcoote.co.uk/wp-content/CodeBank/Demos/JSONSuggestBox/demo.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Cucumber Steps</title>
+
+    <link rel="stylesheet" href="./assets/jsonSuggest.css" type="text/css">
+
+</head>
+
+<body>
+
+<h1>Cucumber Steps</h1>
+<p>Type something to get Cucumber Steps suggestions</p>
+<input type="text" size="50" id="suggestBox" autocomplete="off"><div class="jsonSuggestResults" style="top: 353.5333251953125px; left: 8px; width: 267px; display: none;"></div>
+
+
+<script language="JavaScript" src="./assets/jquery-1.3.2.min.js"></script>
+<script language="JavaScript" src="./assets/jquery.jsonSuggest.js"></script>
+<script language="JavaScript" src="./assets/json2.js"></script>
+<script language="JavaScript" src="./assets/report.js"></script>
+<script>
+
+    function callback(item) {
+        alert('You selected \'' + item.text + '\'\n\nHere is the full selected JSON object;\n' + JSON.stringify(item));
+    }
+
+    jQuery(function() {
+
+        $('input#suggestBox').jsonSuggest(steps.list, {onSelect:callback});
+
+    });
+
+</script>
+
+
+</body></html>

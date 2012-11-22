@@ -1,0 +1,39 @@
+{"givens":[
+    {
+        "value":"something I am interested in",
+        "filename":"/Users/kostasmamalis/development/personal/cukeSteps/cukesteps-maven-plugin/src/test/resources/test.feature"
+    },
+    {
+        "value":"extemely (.+) important step2",
+        "filename":"/Users/kostasmamalis/development/personal/cukeSteps/cukesteps-maven-plugin/src/test/java/net/masterthought/StepDefs.java"
+    },
+    {
+        "value":"something I am interested in",
+        "filename":"/Users/kostasmamalis/development/personal/cukeSteps/cukesteps-maven-plugin/target/test-classes/test.feature"
+    },
+    {
+        "value":"extemely (.+) important step",
+        "filename":"/Users/kostasmamalis/development/personal/cukeSteps/cukesteps-maven-plugin/src/test/java/net/masterthought/StepDefs.java"
+    },
+    {
+        "value":"something completely different",
+        "filename":"/Users/kostasmamalis/development/personal/cukeSteps/cukesteps-maven-plugin/target/test-classes/test.feature"
+    },
+    {
+        "value":"something completely different",
+        "filename":"/Users/kostasmamalis/development/personal/cukeSteps/cukesteps-maven-plugin/src/test/resources/test.feature"
+    }
+], "whens":[
+    {
+        "value":"I stop",
+        "filename":"/Users/kostasmamalis/development/personal/cukeSteps/cukesteps-maven-plugin/src/test/resources/test.feature"
+    },
+    {
+        "value":"yet another one!",
+        "filename":"/Users/kostasmamalis/development/personal/cukeSteps/cukesteps-maven-plugin/src/test/java/net/masterthought/StepDefs.java"
+    },
+    {
+        "value":"I stop",
+        "filename":"/Users/kostasmamalis/development/personal/cukeSteps/cukesteps-maven-plugin/target/test-classes/test.feature"
+    }
+]}
