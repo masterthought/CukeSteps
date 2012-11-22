@@ -4,6 +4,7 @@
 _Steps Navigator for cucumber-JVM projects_
 
     Cuke Steps is a maven plugin that helps you by creating a library of all the available Cucumber steps
+    in a specific java project.
     It currently locates all available steps in .java or .feature files.
     After compilation phase, it generates a cukes.html report which can be found in the target/ folder
 
