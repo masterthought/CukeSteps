@@ -9,17 +9,19 @@ import java.util.*;
 
 public class FileParser {
 
-    private String directory = System.getProperty("dir");
+    private String directory;
     private SortedSet<Step> steps = new TreeSet<Step>();
 
     public Set<Step> getSteps() {
         return steps;
     }
 
+
+
     private List<File> allJavaAndFeatureFiles() {
         List<File> desiredFiles = new ArrayList<File>();
         try {
-            if (directory == null) directory = ".";
+
             File dir = new File(directory);
 
             System.out.println("Getting all files in " + dir.getCanonicalPath() + " including those in subdirectories");
@@ -48,8 +50,8 @@ public class FileParser {
         return allLines;
     }
 
-
-    public FileParser() {
+    public FileParser(String directory){
+        this.directory = directory == null ? "." : directory;
         Map<String, List<String>> allLines = allLinesToParse();
         for (String filename : allLines.keySet()) {
             for (String line : allLines.get(filename)) {
@@ -60,6 +62,10 @@ public class FileParser {
                 processAll(line, filename);
             }
         }
+    }
+
+    public FileParser() {
+        this(".");
     }
 
     private void processAll(String line, String filename) {

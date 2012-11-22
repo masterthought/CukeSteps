@@ -15,6 +15,7 @@ public class ReportCreator {
 
     private static final String reportJs = "target/assets/report.js";
     private static final String cukesHtml = "target/cukes.html";
+    private String directory;
 
     private enum Files {
         JQUERY_SUGGEST("target/assets/jquery.jsonSuggest.js", "velocity/jquery.jsonSuggest.js.vm"),
@@ -39,9 +40,13 @@ public class ReportCreator {
         private String velocity;
     }
 
-    public String createNewMainJson() {
+    public ReportCreator(String directory){
+        this.directory = directory;
+    }
+
+    public String createNewMainJson(String directory) {
         Gson allJson = new Gson();
-        Set<Step> steps = new FileParser().getSteps();
+        Set<Step> steps = new FileParser(directory).getSteps();
         Type stepType = new TypeToken<Set<Step>>() {
         }.getType();
         String prefix = "var steps = {}; steps.list=";
@@ -49,7 +54,7 @@ public class ReportCreator {
     }
 
     public void generateAll() throws IOException {
-        FileUtils.writeStringToFile(new File(reportJs), createNewMainJson(), "UTF-8");
+        FileUtils.writeStringToFile(new File(reportJs), createNewMainJson(directory), "UTF-8");
         try {
             createMainPage();
             createAssets();

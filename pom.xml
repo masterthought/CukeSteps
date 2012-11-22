@@ -7,7 +7,7 @@
   <version>1.0</version>
   <packaging>maven-plugin</packaging>
 
-  <name>Plugin to create a json file with all steps found in project</name>
+  <name>Plugin to create an html navigator to all steps found in project</name>
   <url>http://maven.apache.org</url>
 
   <properties>
